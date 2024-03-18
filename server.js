@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const clarifaiApp = new Clarifai.App({ apiKey: CLARIPI });
+const clarifaiApp = new Clarifai.App({ apiKey: '74a43354d78d433d9757f71e52628256' });
 
 const handleImageDetection = (req, res) => {
     clarifaiApp.models.predict(Clarifai.GENERAL_MODEL, req.body.input)
